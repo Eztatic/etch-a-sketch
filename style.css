@@ -1,0 +1,14 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      /* outline: 2px solid red; */
+}
+
+/* .container {
+      display: grid;
+      grid: repeat(16, 1fr)/ repeat(16, 1fr);
+      width: fit-content;
+      height: fit-content;
+      border: 5px solid green;
+} */
