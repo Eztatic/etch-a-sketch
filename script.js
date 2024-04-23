@@ -3,16 +3,19 @@ const grid = document.querySelector(".container");
 
 boxes.style.width = "25px";
 boxes.style.height = "25px";
-boxes.style.outline = "2px solid red";
+boxes.style.outline = "1px solid #000";
 
-grid.style.display = "grid";
-grid.style.grid = "repeat(16, 1fr)/ repeat(16, 1fr)";
-grid.style.width = "fit-content";
-grid.style.height = "fit-content";
-
-for(let i = 1; i <= 256; i++){
+for(let i = 0; i <= 255; i++){
       grid.appendChild(boxes.cloneNode(true));
 }
+
+let cell = document.querySelectorAll("div > div")
+
+cell.addEventListener('mouseenter', () => {
+      cell.style.backgroundColor = "#000";
+      // grid.classList.add("cell");
+      console.log("hovered");
+});
 
 
 
