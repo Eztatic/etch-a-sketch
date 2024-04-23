@@ -6,16 +6,21 @@ boxes.style.height = "25px";
 boxes.style.outline = "1px solid #000";
 
 for(let i = 0; i <= 255; i++){
-      grid.appendChild(boxes.cloneNode(true));
+      const box = boxes.cloneNode(true);
+      grid.appendChild(box);
+
+      box.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = "#000";
+      });
 }
 
-let cell = document.querySelectorAll("div > div")
 
-cell.addEventListener('mouseenter', () => {
-      cell.style.backgroundColor = "#000";
-      // grid.classList.add("cell");
-      console.log("hovered");
-});
+
+
+      
+
+
+
 
 
 
