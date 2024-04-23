@@ -7,19 +7,22 @@ boxes.style.width = "25px";
 boxes.style.height = "25px";
 boxes.style.outline = "1px solid #000";
 
+const randInt = () => {
+      return Math.floor((Math.random() * 254) + 1);
+}
+
 let generateGrid = (s) => {
       let temp = s;
       s = s * s;
       for(let i = 1; i <= s; i++){
             const box = boxes.cloneNode(true);
             grid.appendChild(box);
-      
             box.addEventListener('mouseenter', function() {
-                  this.style.backgroundColor = "#000";
-            });
+                  this.style.backgroundColor = 
+                  `rgb(${randInt()}, ${randInt()}, ${randInt()})`;
+            }); 
       }  
       let gridWidth = temp * 25;
-      console.log(gridWidth);
       grid.style.maxWidth = `${gridWidth}px`;
 }
 generateGrid(size);
@@ -34,6 +37,7 @@ button.addEventListener('click', function() {
             return alert("Invalid Input");
       }
 });
+
 
 
 
